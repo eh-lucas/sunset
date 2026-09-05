@@ -2,6 +2,8 @@
 name = "sunset"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Editor de fotos mínimo em Rust, no espírito do módulo Revelação do Lightroom."
 
 [dependencies]
 eframe = { version = "0.31", default-features = false, features = [
