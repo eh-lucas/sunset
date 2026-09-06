@@ -315,6 +315,9 @@ impl eframe::App for Sunset {
                     let a = &mut self.adjustments;
                     let p = &self.palette;
                     let mut changed = false;
+                    changed |= tone_slider(ui, p, "Temperatura", &mut a.temperature, -100.0..=100.0, 0);
+                    changed |= tone_slider(ui, p, "Matiz", &mut a.tint, -100.0..=100.0, 0);
+                    ui.add_space(4.0);
                     changed |= tone_slider(ui, p, "Exposição", &mut a.exposure, -5.0..=5.0, 2);
                     changed |= tone_slider(ui, p, "Contraste", &mut a.contrast, -100.0..=100.0, 0);
                     ui.add_space(4.0);
